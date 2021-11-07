@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cocktail Companion</string>
+    <string name="name_text">Cocktail Companion</string>
+    <string name="favorites">Favorites</string>
+    <string name="_searchName">Search by name</string>
+    <string name="_searchIngre">Search by ingredient</string>
+    <string name="_searchButton">Search</string>
+
+</resources>
