@@ -10,8 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-        android:name=".MainActivity"
-        android:exported="true">
+            android:name=".FavoritesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RecipeViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
