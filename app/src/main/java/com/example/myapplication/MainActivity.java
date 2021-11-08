@@ -2,6 +2,8 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,6 +25,14 @@ public class MainActivity extends AppCompatActivity{
         searchIngre = findViewById(R.id._ingre_search);
         ingreButton = findViewById(R.id._ingre_button);
         favorites = findViewById(R.id._favorites);
-        
+
+
+        favorites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent favoriteView = new Intent(MainActivity.this, FavoritesActivity.class);
+                startActivity(favoriteView);
+            }
+        });
     }
 }
