@@ -26,12 +26,27 @@ public class MainActivity extends AppCompatActivity{
         ingreButton = findViewById(R.id._ingre_button);
         favorites = findViewById(R.id._favorites);
 
-
         favorites.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent favoriteView = new Intent(MainActivity.this, FavoritesActivity.class);
                 startActivity(favoriteView);
+            }
+        });
+
+        nameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent recipeView = new Intent(MainActivity.this, RecipeViewActivity.class);
+                startActivity(recipeView);
+            }
+        });
+
+        ingreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent searchView = new Intent(MainActivity.this, SearchActivity.class);
+                startActivity(searchView);
             }
         });
     }
