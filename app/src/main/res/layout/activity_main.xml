@@ -44,9 +44,9 @@
     <EditText
         android:id="@+id/_ingre_search"
         android:layout_width="0dp"
-        android:layout_height="43dp"
+        android:layout_height="45dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
         android:hint="@string/_searchIngre"
         android:inputType="textPersonName"
