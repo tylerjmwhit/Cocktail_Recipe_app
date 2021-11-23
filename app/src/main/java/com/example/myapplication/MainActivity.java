@@ -9,12 +9,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.os.Bundle;
 
+import com.example.myapplication.dataBase.AppData;
+import com.example.myapplication.dataBase.FavoriteData;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity{
     private EditText searchName;
     private Button nameButton;
     private EditText searchIngre;
     private Button ingreButton;
     private Button favorites;
+
+    List<FavoriteData> dataList = new ArrayList<>();
+    AppData database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
