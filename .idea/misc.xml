@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Tyler/AndroidStudioProjects/Cocktail_Recipe_app/app/src/main/res/layout/activity_favorites.xml" value="0.33" />
         <entry key="..\:/Users/Tyler/AndroidStudioProjects/Cocktail_Recipe_app/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/Tyler/AndroidStudioProjects/Cocktail_Recipe_app/app/src/main/res/layout/activity_recipe_view.xml" value="0.225" />
+        <entry key="..\:/Users/Tyler/AndroidStudioProjects/Cocktail_Recipe_app/app/src/main/res/layout/activity_search.xml" value="0.5" />
         <entry key="..\:/Users/Tyler/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.42407407407407405" />
         <entry key="..\:/Users/Tyler/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main2.xml" value="0.42407407407407405" />
         <entry key="..\:/Users/Tyler/AndroidStudioProjects/MyApplication/app/src/main/res/layout/content_main.xml" value="0.42407407407407405" />
         <entry key="..\:/Users/Tyler/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_first.xml" value="0.42407407407407405" />
         <entry key="..\:/Users/Tyler/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_second.xml" value="0.42407407407407405" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1503623188405797" />
       </map>
     </option>
   </component>

@@ -5,5 +5,7 @@
     <string name="_searchName">Search by name</string>
     <string name="_searchIngre">Search by ingredient</string>
     <string name="_searchButton">Search</string>
+    <string name="_favoriteTitle">Favorites</string>
+    <string name="_homeButton">Home</string>
 
 </resources>
