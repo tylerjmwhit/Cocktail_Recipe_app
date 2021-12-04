@@ -31,6 +31,7 @@ public class RecipeSearchByNameAsyncTask extends AsyncTask<String, Void, List<Re
 
     // setter
     public void setListener(RecipeListener listener) {
+
         this.listener = listener;
     }
 

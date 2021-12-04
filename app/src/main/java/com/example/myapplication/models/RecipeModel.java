@@ -3,22 +3,30 @@ package com.example.myapplication.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
+
 public class RecipeModel implements Parcelable
 {
     private String recipeName;
-    private String ingredients;
+    private ArrayList<String> ingredients;
+    private String recipe;
+    private String thumbNail;
 
     //Simple constructor
     public RecipeModel()
     {
+        thumbNail = "";
         recipeName = "";
-        ingredients ="";
+        ingredients = new ArrayList<>();
+        recipe = "";
     }
     //Parameterized Constructor that takes a Parcel object
     public RecipeModel(Parcel in)
     {
+        thumbNail = in.readString();
         recipeName = in.readString();
-        ingredients = in.readString();
+        ingredients = in.createStringArrayList();
+        recipe = in.readString();
     }
 
     public static final Creator<RecipeModel> CREATOR = new Creator<RecipeModel>()
@@ -36,15 +44,16 @@ public class RecipeModel implements Parcelable
         }
     };
 
-    public String getRecipeName() {
-        return recipeName;
-    }
-    public String getIngredients() { return ingredients; }
+    public String getRecipeName() { return recipeName; }
+    public ArrayList<String> getIngredients() { return ingredients; }
+    public String getRecipe(){return recipe;}
+    public String getThumbNail() { return thumbNail;}
 
-    public void setRecipeName(String value) {
-        this.recipeName = value;
-    }
-    public void setIngredients(String value) { this.ingredients = value; }
+    public void setRecipeName(String value) { this.recipeName = value; }
+    public void setIngredients(String value) { this.ingredients.add(value); }
+    public void setIngredients(ArrayList<String> value){this.ingredients.addAll(value);}
+    public void setRecipe(String value){this.recipe = value;}
+    public void setThumbNail(String value){this.thumbNail = value;}
 
     @Override
     public int describeContents()
@@ -55,7 +64,9 @@ public class RecipeModel implements Parcelable
     @Override
     public void writeToParcel(Parcel parcel, int i)
     {
+        parcel.writeString(thumbNail);
         parcel.writeString(recipeName);
-        parcel.writeString(ingredients);
+        parcel.writeStringList(ingredients);
+        parcel.writeString(recipe);
     }
 }

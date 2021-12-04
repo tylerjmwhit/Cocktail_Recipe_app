@@ -35,13 +35,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Search bar where text will go to search by name
         searchName = findViewById(R.id._name_search);
+
         //Name button that when clicked will search for a recipe by name
         nameButton = findViewById(R.id._name_button);
+
         //Search bar where text will go to search by ingredient
         searchIngre = findViewById(R.id._ingre_search);
+
         //Button that when clicked will search for a recipe by ingredient
         ingreButton = findViewById(R.id._ingre_button);
-        //Button that when clicked will take you to the favorites page?
+
+        //Button that when clicked will take you to the favorites page
         favorites = findViewById(R.id._favorites);
 
 
