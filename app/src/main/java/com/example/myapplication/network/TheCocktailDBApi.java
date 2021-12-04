@@ -14,7 +14,7 @@ public class TheCocktailDBApi
     //www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 
     //Going to where the api is located via URL
-    private static final String baseApiUrl = "www.thecocktaildb.com/api/json/v1/1/filter.php";
+    private static final String baseApiUrl = "https://www.thecocktaildb.com/api/json/v1/1/";
     //Test apiKey is listed as 1 on the website
     private static final String apiKey = "1";
 
@@ -33,6 +33,7 @@ public class TheCocktailDBApi
         HttpUrl.Builder urlBuilder = HttpUrl.parse(baseApiUrl).newBuilder();
 
         // and adding on a few more parts
+        urlBuilder.addPathSegment("filter.php");
         urlBuilder.addQueryParameter("apiKey", apiKey);
         //For TheCockTail database, they use i to denote a search by ingredients
         urlBuilder.addQueryParameter("i", input);
@@ -49,6 +50,7 @@ public class TheCocktailDBApi
         HttpUrl.Builder urlBuilder = HttpUrl.parse(baseApiUrl).newBuilder();
 
         // and adding on a few more parts
+        urlBuilder.addPathSegment("search.php");
         urlBuilder.addQueryParameter("apiKey", apiKey);
         urlBuilder.addQueryParameter("s", input); //
 

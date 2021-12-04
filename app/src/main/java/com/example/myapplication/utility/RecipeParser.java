@@ -33,20 +33,36 @@ public class RecipeParser
 
         try {
             // a JSONArray representing the whole response
-            JSONArray response = new JSONArray(json);
-
+            JSONObject result = new JSONObject(json);
+            JSONArray response = result.getJSONArray("drinks");
             for(int i=0; i < response.length(); i++)
             {
-                // todo: loop through the array and deserialize! json -> Java
-                //Our java object that captures the the JSON values we want to capture/are parsing for
-                RecipeModel model = new RecipeModel();
-                JSONObject recipe = response.getJSONObject(i);
-                String title = recipe.getString("title");
-                int likes = recipe.getInt("likes");
 
+                //Our java object that captures the the JSON values we want to capture/are parsing for
+                JSONObject recipe = response.getJSONObject(i);
+                String instructions = recipe.optString("strInstructions");
+                String recipeName = recipe.optString("strDrink");
+                String image = recipe.optString("strDrinkThumb");
+                ArrayList<String> ingredients = new ArrayList<>();
+                String mystring = "strIngredient";
+                String ingreString;
+                if(instructions != "") {
+                    for (int j = 1; j < 15; j++) {
+                        mystring = mystring + j;
+                        ingreString = recipe.optString(mystring);
+                        if (ingreString != "null") {
+                            ingredients.add(ingreString);
+                        }
+                        mystring = "strIngredient";
+                    }
+                }
                 //We now want to set our RecipeModel object's attributes using our setters
-                //model.setTitle(title);
-                //model.setLikes(likes);
+                RecipeModel model = new RecipeModel();
+                model.setThumbNail(image);
+                model.setRecipe(instructions);
+                model.setIngredients(ingredients);
+                model.setRecipeName(recipeName);
+
 
                 //Now we need to add this RecipeModel object into our list/array of RecipeModel objects that we made earlier
                 modelList.add(model);
