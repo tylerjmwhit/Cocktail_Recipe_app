@@ -9,6 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.os.Bundle;
 
+import com.example.myapplication.models.RecipeModel;
+import com.example.myapplication.network.RecipeSearchByIngredientAsyncTask;
+import com.example.myapplication.network.RecipeSearchByNameAsyncTask;
+import com.example.myapplication.network.RecipeSearchByNameAsyncTask;
 import com.example.myapplication.dataBase.AppData;
 import com.example.myapplication.dataBase.FavoriteData;
 
@@ -96,8 +100,6 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onRecipeSearchCallback(List<RecipeModel> ArrayOfRecipeModel) {
                         //Show the first response on the screen
-
-
                         Intent searchView = new Intent(MainActivity.this, SearchActivity.class);
                         //When we search by ingredient we go to the search view where we can choose between list of recipes that contain that ingredient
                         // TODO pass the search string as an extra as well
