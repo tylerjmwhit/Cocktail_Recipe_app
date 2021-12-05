@@ -4,6 +4,8 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.example.myapplication.models.RecipeModel;
+
 import java.io.Serializable;
 
 @Entity(tableName = "table_name")
@@ -13,7 +15,7 @@ public class FavoriteData implements Serializable {
     private int ID;
 
     //create JSON column ;
-    private String JSON;
+    private String myModel;
 
     public int getID() {
         return ID;
@@ -23,12 +25,12 @@ public class FavoriteData implements Serializable {
         this.ID = ID;
     }
 
-    public String getJSON() {
-        return JSON;
+    public String getMyModel() {
+        return myModel;
     }
 
-    public void setJSON(String JSON) {
-        this.JSON = JSON;
+    public void setMyModel( String myModel) {
+        this.myModel = myModel;
     }
 
 }

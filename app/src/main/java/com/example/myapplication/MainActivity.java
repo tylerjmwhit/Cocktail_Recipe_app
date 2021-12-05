@@ -3,10 +3,10 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.os.Bundle;
 
 import com.example.myapplication.models.RecipeModel;
@@ -18,8 +18,12 @@ import com.example.myapplication.dataBase.FavoriteData;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.example.myapplication.models.RecipeModel;
+import com.example.myapplication.network.RecipeSearchByIngredientAsyncTask;
+import com.example.myapplication.network.RecipeSearchByNameAsyncTask;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
     private EditText searchName;
     private Button nameButton;
     private EditText searchIngre;
@@ -27,7 +31,7 @@ public class MainActivity extends AppCompatActivity{
     private Button favorites;
 
     List<FavoriteData> dataList = new ArrayList<>();
-    AppData database;
+    //AppData database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +77,7 @@ public class MainActivity extends AppCompatActivity{
                         RecipeModel first = ArrayOfRecipeModel.get(0);
                         //When searching a recipe by name we go directly to the recipe by that name
                         Intent recipeView = new Intent(MainActivity.this, RecipeViewActivity.class);
+                        recipeView.putExtra(RecipeViewActivity.RECIPE_KEY, first);
                         startActivity(recipeView);
 
                     }
@@ -95,10 +100,10 @@ public class MainActivity extends AppCompatActivity{
                     @Override
                     public void onRecipeSearchCallback(List<RecipeModel> ArrayOfRecipeModel) {
                         //Show the first response on the screen
-                        RecipeModel first = ArrayOfRecipeModel.get(0);
-
                         Intent searchView = new Intent(MainActivity.this, SearchActivity.class);
                         //When we search by ingredient we go to the search view where we can choose between list of recipes that contain that ingredient
+                        // TODO pass the search string as an extra as well
+                        searchView.putParcelableArrayListExtra(SearchActivity.INGRE_KEY, (ArrayList<? extends Parcelable>) ArrayOfRecipeModel);
                         startActivity(searchView);
                     }
 
