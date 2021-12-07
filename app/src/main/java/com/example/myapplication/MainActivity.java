@@ -102,8 +102,8 @@ public class MainActivity extends AppCompatActivity {
                         //Show the first response on the screen
                         Intent searchView = new Intent(MainActivity.this, SearchActivity.class);
                         //When we search by ingredient we go to the search view where we can choose between list of recipes that contain that ingredient
-                        // TODO pass the search string as an extra as well
                         searchView.putParcelableArrayListExtra(SearchActivity.INGRE_KEY, (ArrayList<? extends Parcelable>) ArrayOfRecipeModel);
+                        searchView.putExtra("SEARCH PARA", searchIngre.getText().toString());
                         startActivity(searchView);
                     }
 
