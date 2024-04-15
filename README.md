@@ -9,7 +9,7 @@ The Cocktail_Recipe_app is an Android application that allows users to search fo
 - Save Favorites: Users can save their favorite recipes to access them later.
 - Offline Access: The app allows users to access their favorite recipes even when offline.
   
-##Getting Started
+## Getting Started
 To get started with the Recipe Finder App, follow these steps:
 
 - Clone the repository to your local machine.
