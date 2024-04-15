@@ -1,6 +1,6 @@
 # Cocktail_Recipe_app
 
-The Cocktail_Recipe_app is an Android application that allows users to search for recipes by name or ingredient. It leverages machine learning techniques to provide accurate recipe suggestions and enables users to save their favorite recipes for future reference.
+The Cocktail_Recipe_app is an Android application that allows users to search for recipes by name or ingredient.
 
 Features
 Search by Name: Users can search for recipes by entering the name of the recipe.
